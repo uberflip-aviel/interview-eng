@@ -15,5 +15,9 @@ RUN echo "database=university" >> /etc/mysql/conf.d/mysql.cnf
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
 # Install Codesniffer
-RUN composer require --dev "squizlabs/php_codesniffer=*"
+USER gitpod
+
+ENV PATH "$PATH:/home/gitpod/.composer/vendor/bin"
+
+RUN composer global require --dev "squizlabs/php_codesniffer=*"
 
