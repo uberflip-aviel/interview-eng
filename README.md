@@ -58,6 +58,13 @@ Note: The MySQL instance may take some time to start up, check the Docker output
 
 Available on standard ports (eg. `5672` or `5552`) via `localhost`. The management plugin is also enabled and accessible on port `15672`, and can be opened using the Remote Explorer Activity View. Feel free to use one of the many [client libraries](https://www.rabbitmq.com/devtools.html) to interact with the service.
 
+### PHP CodeSniffer (Linter)
+
+1. Run `./vendor/bin/phpcs /path/of/file` to evaluate the code
+2. Run `./vendor/bin/phpcbf /path/of/file` to fix code using default coding standard
+
+Note: Default coding standard is set to PSR2
+
 #### Connection Details
 
 | Parameter | Value     |
