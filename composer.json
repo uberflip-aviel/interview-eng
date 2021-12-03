@@ -3,6 +3,6 @@
         "squizlabs/php_codesniffer": "*"
     },
     "scripts": {
-        "phpcs": "./vendor/bin/phpcs --standard=PSR2"
+        "phpcs": "./vendor/bin/phpcs --config-set default_standard PSR2"
     }
 }
